@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="430.0" maxWidth="720.0" minHeight="430.0" minWidth="720.0" prefHeight="430.0" prefWidth="720.0" style="-fx-border-radius: 30; -fx-background-color: #3f484f;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <StackPane layoutX="272.0" prefHeight="390.0" prefWidth="390.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Log in" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtUsername" focusColor="#f45e5e" labelFloat="true" layoutX="20.0" layoutY="130.0" maxWidth="348.0" minWidth="348.0" prefHeight="31.0" prefWidth="348.0" promptText="Enter Username" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="txtPassword" focusColor="#f45e5e" labelFloat="true" layoutX="20.0" layoutY="206.0" maxWidth="350.0" minWidth="350.0" prefHeight="36.0" prefWidth="350.0" promptText="Password" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <StackPane layoutY="348.0" prefHeight="40.0" prefWidth="398.0" style="-fx-background-color: #f45e5e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <JFXButton fx:id="btnLogin" minHeight="40.0" minWidth="396.0" onAction="#executeLogin" prefHeight="40.0" prefWidth="396.0" ripplerFill="WHITE" style="-fx-background-color: #f45e5e;" text="Login" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <rotationAxis>
+                              <Point3D />
+                           </rotationAxis>
+                        </JFXButton>
+                     </children>
+                  </StackPane>
+                  <Label fx:id="lblStatusMessage" layoutX="20.0" layoutY="288.0" textFill="#d34336" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#000000e4" />
+               </effect>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <Label layoutX="65.0" layoutY="219.0" text="Red Brick" textFill="WHITE" AnchorPane.bottomAnchor="158.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="511.0" AnchorPane.topAnchor="219.0">
+         <font>
+            <Font name="Segoe UI Semilight" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="87.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="171.0" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="533.0" AnchorPane.topAnchor="119.0">
+         <image>
+            <Image url="@../../img/redbrickIconSmall.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnExit" layoutX="681.0" layoutY="1.0" maxHeight="30.0" maxWidth="30.0" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" styleClass="redbrickButtons" stylesheets="@application.css" textFill="WHITE" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

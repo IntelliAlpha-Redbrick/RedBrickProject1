@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainWindow" minHeight="700.0" minWidth="800.0" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainAppController">
+	<children>
+      <MenuBar layoutX="14.0" layoutY="2.0" minHeight="20.0" prefHeight="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="menuDataBackup" mnemonicParsing="false" text="Data Backup">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="B" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+              <MenuItem fx:id="menuPrinterSetup" mnemonicParsing="false" text="Printer Setup">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="menuLogout" mnemonicParsing="false" text="Logout">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="L" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="menuExit" mnemonicParsing="false" onAction="#menuExitAction" text="Exit">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Report">
+            <items>
+              <MenuItem fx:id="menuExportEmployee" mnemonicParsing="false" text="Export Employee Data (.xls)">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="menuImportEmoloyee" mnemonicParsing="false" text="Import Employee Data (.xls)">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="I" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+                  <MenuItem fx:id="menuHelp" mnemonicParsing="false" text="Redbrick Help">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F1" control="UP" meta="UP" shift="UP" shortcut="ANY" />
+                     </accelerator>
+                  </MenuItem>
+              <MenuItem fx:id="menuAbout" mnemonicParsing="false" onAction="#menuAboutAction" text="About Red Brick" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+		<AnchorPane fx:id="paneTitlebar" layoutY="6.0" prefHeight="50.0" prefWidth="750.0" styleClass="paneTitlebar" stylesheets="@application.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+			<children>
+				<HBox prefHeight="50.0" prefWidth="315.0">
+					<children>
+                  <StackPane prefHeight="50.0" prefWidth="60.0">
+                     <children>
+      						<JFXHamburger fx:id="burgerSidebar" onMouseClicked="#burgerClickedEvent" prefHeight="50.0" prefWidth="60.0" stylesheets="@application.css">
+      							<padding>
+      								<Insets left="20.0" right="10.0" />
+      							</padding>
+      						</JFXHamburger>
+                     </children>
+                  </StackPane>
+						<Label fx:id="labelHeading" prefHeight="50.0" prefWidth="232.0" styleClass="labelHeading" stylesheets="@application.css" text="Viraj Brick Store">
+							<font>
+								<Font size="28.0" />
+							</font>
+							<HBox.margin>
+								<Insets left="10.0" />
+							</HBox.margin>
+						</Label>
+					</children>
+				</HBox>
+            <GridPane layoutX="586.0" layoutY="10.0" prefHeight="30.0" prefWidth="270.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="5.0" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <StackPane fx:id="paneButtonLeft" prefHeight="150.0" prefWidth="200.0" />
+                  <StackPane fx:id="paneButttonRight" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+			</children>
+		</AnchorPane>
+      <AnchorPane fx:id="mainAnchorPane" layoutX="230.0" layoutY="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <AnchorPane fx:id="paneContent" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #dddddd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+		<JFXDrawer fx:id="drawerSidebar" defaultDrawerSize="230.0" layoutY="68.0" prefHeight="350.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="75.0">
+         <children>
+				<VBox fx:id="vboxDrawer" prefHeight="546.0" prefWidth="230.0" styleClass="drawerSidebar" stylesheets="@application.css">
+					<children>
+						<JFXButton fx:id="btnHome" onAction="#btnHomeClick" prefHeight="50.0" prefWidth="230.0" ripplerFill="TRANSPARENT" styleClass="btnSidebar" text="Home" />
+						<JFXButton fx:id="btnEmployees" onAction="#btnEmployeesClick" prefHeight="50.0" prefWidth="230.0" ripplerFill="TRANSPARENT" styleClass="btnSidebar" text="Employees" />
+						<JFXButton fx:id="btnStock" onAction="#btnStockClick" prefHeight="50.0" prefWidth="230.0" ripplerFill="TRANSPARENT" styleClass="btnSidebar" text="Stock" />
+						<JFXButton fx:id="btnSales" onAction="#btnSalesClick" prefHeight="50.0" prefWidth="230.0" ripplerFill="TRANSPARENT" styleClass="btnSidebar" text="Sales" />
+						<JFXButton fx:id="btnPurchase" onAction="#btnPurchaseClick" prefHeight="50.0" prefWidth="230.0" ripplerFill="TRANSPARENT" styleClass="btnSidebar" text="Purchase" />
+					</children>
+				</VBox>
+         </children>
+		</JFXDrawer>
+	</children>
+</AnchorPane>

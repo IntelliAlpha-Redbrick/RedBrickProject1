@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlDialogsControllers.AddSalesOrderDialogController">
+   <children>
+      <AnchorPane layoutX="25.0" layoutY="14.0" prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="btnClose" layoutX="393.0" layoutY="7.0" onAction="#btnCloseEvent" prefHeight="30.0" prefWidth="30.0" ripplerFill="#fe605f" styleClass="redbrickButtons" stylesheets="@../application/application.css" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+         </children></AnchorPane>
+      <Label layoutX="22.0" layoutY="19.0" text="Sales Order" textFill="#666666" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="91.0" layoutY="158.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <JFXComboBox fx:id="comboTypeOfOrder" layoutX="20.0" layoutY="40.0" prefHeight="25.0" prefWidth="286.0" promptText="Type of Order" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0" />
+            <JFXTextField fx:id="txtQuantity" focusColor="#fe605f" labelFloat="true" layoutX="20.0" layoutY="95.0" promptText="Quantity" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="95.0" />
+            <JFXTextField fx:id="txtRate" focusColor="#fe605f" labelFloat="true" layoutX="20.0" layoutY="150.0" promptText="Rate" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0" />
+            <JFXTextField fx:id="txtAdjustedAmount" focusColor="#fe605f" labelFloat="true" layoutX="20.0" layoutY="205.0" promptText="Adjusted Amount" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="205.0" />
+            <JFXTextArea fx:id="txtDeliveryDetails" focusColor="#fe605f" labelFloat="true" layoutX="20.0" layoutY="265.0" maxWidth="343.0" minWidth="200.0" prefHeight="50.0" prefWidth="343.0" promptText="Delivery Details" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="265.0" />
+            <JFXTextField fx:id="txtTotalAmount" focusColor="#fe605f" labelFloat="true" layoutX="20.0" layoutY="350.0" maxWidth="190.0" minWidth="190.0" prefHeight="31.0" prefWidth="190.0" promptText="Total Amount" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="350.0" />
+            <JFXTextField fx:id="txtPaidAmount" focusColor="#fe605f" labelFloat="true" layoutX="230.0" layoutY="350.0" maxWidth="204.0" minWidth="204.0" prefHeight="31.0" prefWidth="204.0" promptText="Paid Amount" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="350.0" />
+            <JFXButton fx:id="btnConfirmOrder" layoutX="-10.0" layoutY="440.0" onAction="#btnConfirmOrderEvent" prefHeight="35.0" prefWidth="440.0" style="-fx-background-color: #fe605f;" text="Confirm Order" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXDatePicker fx:id="dateOrderDate" defaultColor="#fe605f" layoutX="20.0" layoutY="400.0" prefHeight="31.0" prefWidth="381.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="400.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

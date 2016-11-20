@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="750.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SalesPaneController" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" >
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="150.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <TableView fx:id="tableSalesOrders" layoutY="40.0" prefHeight="400.0" prefWidth="767.0" styleClass="employeesTable" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
+            <Label layoutX="14.0" layoutY="23.0" text="Sales Orders" textFill="#4a4a4a" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="LIGHTGRAY" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>
